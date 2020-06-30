@@ -1,16 +1,12 @@
+# -*- coding: utf-8 -*-
+import config
 import telebot
 
-bot = telebot.TeleBot('910623067:AAGvvMGdl-XVHueS4i19A0Aigo4rK-RSdsA')
+bot = telebot.TeleBot(config.token)
 
-@bot.message_handler(commands=['start'])
-def start_message(message):
-    bot.send_message(message.chat.id, 'Привет, ты написал мне /start')
+@bot.message_handler(content_types=["text"])
+def repeat_all_messages(message): # Название функции не играет никакой роли, в принципе
+    bot.send_message(message.chat.id, message.text)
 
-@bot.message_handler(content_types=['text'])
-def send_text(message):
-    if message.text.lower() == 'привет':
-        bot.send_message(message.chat.id, 'Привет, мой создатель')
-    elif message.text.lower() == 'пока':
-        bot.send_message(message.chat.id, 'Прощай, создатель')
-
-bot.polling()
+if __name__ == '__main__':
+    bot.polling(none_stop=True)
