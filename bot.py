@@ -2,7 +2,6 @@
 
 import config
 import datetime
-import requests
 import telebot
 import pyowm
 
@@ -16,7 +15,7 @@ mount = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая
 mounth_real = int(today.strftime("%m"))
 
 #Погода в Москве
-temp = pyowm.OWM(tempID, language= 'RU')
+temp = pyowm.OWM(tempID)
 observation = temp.weather_at_place('Москва')
 w = observation.get_weather()
 temp = w.get_temperature('celsius')['temp']
