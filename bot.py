@@ -21,11 +21,6 @@ observation = temp.weather_at_place('Москва')
 w = observation.get_weather()
 temp = w.get_temperature('celsius')['temp']
 
-
-res = requests.get("http://api.openweathermap.org/data/2.5/weather",
-                   params={'id': 524901, 'units': 'metric', 'lang': 'ru', 'APPID': temp})
-data = res.json()
-
 text1 = ('Привет, сегодня ' + today.strftime("%d") + ' ' + mount[mounth_real % 12] + ' ' + today.strftime("%Y") + ' г.')
 text2 = ('Погода в Москве хорошая, ' + w.get_detailed_status()+ ' ' + str(temp) + ' °C')
 
