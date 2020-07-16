@@ -15,7 +15,7 @@ mount = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая
 mounth_real = int(today.strftime("%m"))
 
 #Погода в Москве
-temp = pyowm.OWM(tempID)
+temp = pyowm.OWM(tempID, {'language': 'ru'})
 observation = temp.weather_at_place('Moscow')
 w = observation.get_weather()
 temp = w.get_temperature('celsius')['temp']
