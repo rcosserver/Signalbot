@@ -17,7 +17,7 @@ mounth_real = int(today.strftime("%m"))
 #Погода в Москве
 temp = pyowm.OWM(tempID, {'language': 'ru'})
 observation = temp.weather_at_place('Moscow')
-w = observation.get_weather()
+w = observation.weather
 temp = w.get_temperature('celsius')['temp']
 
 text1 = ('Привет, сегодня ' + today.strftime("%d") + ' ' + mount[mounth_real % 12] + ' ' + today.strftime("%Y") + ' г.')
