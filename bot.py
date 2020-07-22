@@ -22,7 +22,8 @@ mounth_real = int(today.strftime("%m"))
 #w = observation.weather
 #temp = w.get_temperature('celsius')['temp']
 
-temp = owm.weather_manager(tempID, {'language': 'ru'})
+owm = OWM(tempID)
+temp = owm.weather_manager({'language': 'ru'})
 observation = temp.weather_at_place('Moscow')
 w = observation.weather
 temp = w.get_temperature('celsius')['temp']
