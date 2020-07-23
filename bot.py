@@ -18,8 +18,8 @@ mounth_real = int(today.strftime("%m"))
 
 #Погода в Москве
 temp = pyowm.OWM(tempID, {'language': 'ru'})
-observation = temp.weather_at_place('Moscow')
-w = observation.weather
+observation = owm.weather_at_place('Москва')
+w = observation.get_weather()
 temp = w.get_temperature('celsius')['temp']
 
 
