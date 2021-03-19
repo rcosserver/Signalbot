@@ -36,6 +36,7 @@ text2 = ('Погода в Москве хорошая, ' + w.get_detailed_status
 @bot.message_handler(content_types=["text"])
 def message(message):
     bot.send_message(message.chat.id, text1)
+    time.sleep(2)
     bot.send_message(message.chat.id, text2)
 
 
