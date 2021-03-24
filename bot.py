@@ -40,7 +40,7 @@ temp = w.get_temperature('celsius')['temp']
 
 
 text1 = ('Привет, сегодня '+ day + ' ,' + today.strftime("%d") + ' ' + mount[mounth_real % 12] + ' ' + today.strftime("%Y") + ' г.')
-text2 = ('Погода в Москве хорошая, ' + w.get_detailed_status()+ ' ' + str(temp) + ' °C')
+text2 = ('Погода в Москве хорошая, ' + w.get_detailed_status()+ ' ' + str(round(temp)) + ' °C')
 
 
 @bot.message_handler(content_types=["text"])
