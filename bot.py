@@ -5,6 +5,7 @@ import config
 import datetime
 import telebot
 import time
+import xlrd, xlwt
 
 from pyowm import OWM
 owm = pyowm.OWM('1884e6b6d5605fee686cf449ac8b1e54', language= 'RU')
