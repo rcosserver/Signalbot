@@ -9,8 +9,8 @@ from telebot import types
 #from pycbrf.toolbox import ExchangeRates
 
 #Токены
-owm = pyowm.OWM('b361339059299ff10d5f49581c65a323', language= 'RU')
-bot = telebot.TeleBot('1364661979:AAEqwqOPk63kK7KqQeXHNBTCAiKBBVaXVt0')
+owm = pyowm.OWM('*******', language= 'RU')
+bot = telebot.TeleBot('*******')
 
 #Погода в Москве
 observation = owm.weather_at_place('Москва')
