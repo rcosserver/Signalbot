@@ -1,2 +1,2 @@
-First bot pyton
+First bot python
 # Signalbot
